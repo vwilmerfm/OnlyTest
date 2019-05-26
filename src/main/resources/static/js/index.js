@@ -24,6 +24,7 @@ Vue.component('mensaje-lista', {
         messageApi.get().then((result) => {
             result.json().then((data) => {
                 data.forEach((sms) => {
+                    // use the props value
                     this.mensajes.push(sms);
                 });
             }) ;
