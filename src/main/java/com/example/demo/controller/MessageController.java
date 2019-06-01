@@ -1,8 +1,16 @@
 package com.example.demo.controller;
 
+import com.example.demo.entity.MessageEntity;
+import com.example.demo.entity.util.Views;
 import com.example.demo.exception.NotFoundException;
+import com.example.demo.repo.MessageRepository;
+import com.fasterxml.jackson.annotation.JsonView;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +37,7 @@ public class MessageController {
             put("text", "Third message");
         }});
     }};
+
     // ---------------------------------------
 
     // -------------- METHODS --------------
@@ -44,6 +53,7 @@ public class MessageController {
     // -------------- CRUD --------------
     // ----------------------------------
 
+    /*
     @GetMapping
     public List<Map<String, String>> list() {
         return messages;
@@ -53,6 +63,7 @@ public class MessageController {
     public Map<String, String> getOne(@PathVariable String id) {
         return getMessage(id);
     }
+    */
 
     /*
     const url = '/message';
@@ -71,6 +82,7 @@ public class MessageController {
             .then(response => console.log('Success:', response));
     */
 
+    /*
     @PostMapping
     public Map<String, String> create(@RequestBody Map<String, String> message) {
         int a = messages.size();
@@ -81,6 +93,7 @@ public class MessageController {
 
         return message;
     }
+    */
 
     /*
     const url = '/message/4';
@@ -99,6 +112,7 @@ public class MessageController {
             .then(response => console.log('Success:', response));
     */
 
+    /*
     @PutMapping("{id}")
     public Map<String, String> update(@PathVariable String id,
                                       @RequestBody Map<String, String> message) {
@@ -109,6 +123,7 @@ public class MessageController {
 
         return messageFromDb;
     }
+    */
 
     /*
     const url = '/message/3';
@@ -123,12 +138,53 @@ public class MessageController {
             .then(response => console.log('Success:', response));
     */
 
+    /*
     @DeleteMapping("{id}")
     public void delete(@PathVariable String id) {
         Map<String, String> message = getMessage(id);
 
         messages.remove(message);
     }
+    */
     // -------------- ----------------------
+    final MessageRepository messageRepo;
+
+    @Autowired
+    public MessageController(MessageRepository messageRepo) {
+        this.messageRepo = messageRepo;
+    }
+
+    @GetMapping
+    @JsonView(Views.Text.class)
+    public List<MessageEntity> list() {
+        return messageRepo.findAll();
+    }
+
+    @GetMapping("{id}")
+    @JsonView(Views.DateMessage.class) // only show de id and date creation
+    public MessageEntity getOne(@PathVariable("id") MessageEntity message) {
+        return message;
+    }
+
+    @PostMapping
+    public MessageEntity create(
+            @RequestBody MessageEntity message) throws IOException {
+        message.setCreationDate(LocalDateTime.now());
+        return messageRepo.save(message);
+    }
+
+    @PutMapping("{id}")
+    public MessageEntity update(
+            @PathVariable("id") MessageEntity messageFromDb,
+            @RequestBody MessageEntity message
+    ) throws IOException {
+        BeanUtils.copyProperties(message, messageFromDb, "id");
+        return messageRepo.save(messageFromDb);
+    }
+
+    @DeleteMapping("{id}")
+    public void delete(@PathVariable("id") MessageEntity message) {
+        messageRepo.delete(message);
+    }
 
 }

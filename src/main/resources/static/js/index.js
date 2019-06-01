@@ -1,4 +1,5 @@
 let messageApi = Vue.resource('/message{/id}');
+// const axios = require('axios');
 
 function getIndexFromList(list, id) {
     for (let i = 0; i < list.length; i++) {
@@ -115,6 +116,19 @@ Vue.component('mensaje-lista', {
                         });
                     });
             });
+
+        // axios.get('/message')
+        //     .then(function (response) {
+        //         // handle success
+        //         console.log('wilmer', response);
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .finally(function () {
+        //         // always executed
+        //     });
     },
     methods: {
         editarSMS: function (pSms) {
