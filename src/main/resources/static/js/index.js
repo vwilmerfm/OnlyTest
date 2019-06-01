@@ -125,8 +125,8 @@ Vue.component('mensaje-lista', {
 
 let app = new Vue({
     el: '#app',
-    template: '<mensaje-lista :mensajes="messagesArray" />',
+    template: '<mensaje-lista :mensajes="messagesInArray" />',
     data: {
-        messagesArray: []
+        messagesInArray: []
     }
 });
