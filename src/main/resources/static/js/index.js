@@ -20,15 +20,16 @@ Vue.component('mensaje-lista', {
                :mensaje="item"/>
     </div>
     `,
-    created: function() {
-        messageApi.get().then((result) => {
-            result.json().then((data) => {
-                data.forEach((sms) => {
-                    // use the props value
-                    this.mensajes.push(sms);
+    created: function () {
+        messageApi.get()
+            .then((result) => {
+                result.json().then((data) => {
+                    data.forEach((sms) => {
+                        // use the props value
+                        this.mensajes.push(sms);
+                    });
                 });
-            }) ;
-        });
+            });
     }
 });
 
