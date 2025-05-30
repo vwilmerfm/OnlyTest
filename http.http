@@ -1,0 +1,362 @@
+######################## AUTENTICACION ######################
+# @hostname = http://190.129.122.115:3004/
+@hostname = http://localhost:3004/
+
+# # obtener todos los usuarios
+# GET {{hostnameUser}}lista_administradores
+# Content-Type: application/json
+# # Authorization: Bearer {{accesToken_user1}}
+# ###
+
+
+### login
+POST {{hostname}}login
+Content-Type: application/json
+
+{
+  "usuario": "4842100",
+  "contrasenia": "4842100"
+}
+###
+
+### 
+POST {{hostname}}login
+Content-Type: application/json
+
+{
+  "usuario": "victorhcm",
+  "contrasenia": "123456"
+}
+###
+
+# # # @accesToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjQ5MzkxNjAsImV4cCI6MTcyNTAyNTU2MH0.BCyA5ywsEXdXTeNMuoutKZq1YKUxrvvKrN0s8HkDZi0
+
+# # # # crear actores
+# # # POST {{hostname}}actor
+# # # content-type: application/json
+# # # token: {{accesToken}}
+
+# # # {
+# # #   "codigo": "asdasdsdfdf",
+# # #   "nombreEntidad": "1234",
+# # #   "sigla": "12344",
+# # #   "alcance": 1,
+# # #   "departamento": "",
+# # #   "provincia": "",
+# # #   "municipio": "",
+# # #   "direccion": "",
+# # #   "telefono": "",
+# # #   "paginaWeb": "",
+# # #   "redesSociales": "",
+# # #   "nombreRepresentante": "",
+# # #   "cargoRepresentante": "",
+# # #   "telefonoRepresentante": "",
+# # #   "nombreResponsableTecnico": "",
+# # #   "cargoResponsableTecnico": "",
+# # #   "telefonoReponsableTecnico": "",
+# # #   "caracteristicas": null,
+# # #   "tipoSistemaTrabajo": null,
+# # #   "nivelImportanciaEconomica": null,
+# # #   "nivelImportanciaPolitica": null,
+# # #   "afiliacionEntidadSuperior": null,
+# # #   "codigoEntidadSuperior": null,
+# # #   "poseeAfiliados": null,
+# # #   "codigoEntidadesAfiliados": null,
+# # #   "calificacionImportanciaEstrategica": null,
+# # #   "expectativaOrganizacion": null,
+# # #   "fuerzaOrganizacion": null,
+# # #   "resultante": null,
+# # #   "posicionPotenciaFrenteCenso": null,
+# # #   "gestionConflictos": null,
+# # #   "poseeDirectorioProductores": null,
+# # #   "haceEntregaListadoProductores": null
+# # # }
+# # # ###
+
+# # # ### obtener el listado de actores
+# # # GET {{hostname}}actor
+# # # Content-Type: application/json
+# # # token: {{accesToken}}
+# # # ###
+
+# # # ### obtener el listado de parametros para actores
+# # # GET {{hostname}}parametros
+# # # Content-Type: application/json
+# # # token: {{accesToken}}
+# # # ###
+
+
+# # # @hostname = http://192.168.100.200:3000/interaction
+# # # ### enviar archivos
+# # # POST {{hostname}}interaction
+# # # Content-Type: application/json
+
+# # # {
+# # #   "fechaCreacion": "2022-01-01",
+# # #   "fechaModificacion": "2022-01-01",
+# # #   "usuarioCreacion": 1,
+# # #   "usuarioModificacion": 1,
+# # #   "idSeguimiento": 1,
+# # #   "tipo_interaccion": "asd",
+# # #   "attachments": [
+# # #     {
+# # #       "nombre": "eso.png",
+# # #       "tipo": "imagen",
+# # #       "ruta": "eso.png",
+# # #       "tamanio": 1234,
+# # #       "fecha": "2022-01-01",
+# # #       "estado": "activo",
+# # #       "eliminado": false,
+# # #       "fecha_modificacion": "2022-01-01",
+# # #       "usuarioCreacion": 1,
+# # #       "usuarioModificacion": 1,
+# # #       "idSeguimiento": 1
+# # #     }
+# # #   ]
+# # # }
+# # # ###
+
+
+# # # ### obtener el listado de entidades
+# # # GET {{hostname}}actores
+# # # Content-Type: application/json
+# # # token: {{accesToken}}
+
+# # # {
+# # #   "codigo": "1234"
+# # # }
+# # # ###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # # ### login1
+# # # POST {{hostname}}login1
+# # # Content-Type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #   "username": "a",
+# # #   "password": "1234"
+# # # }
+# # # ###
+
+# # # # refresh 
+# # # GET {{hostname}}refresh
+# # # content-type: application/json
+# # # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # @accesToken_user1=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY2NDg5MjQyOSwiZXhwIjoxNjY0OTc4ODI5fQ.kicBki8pXh9pPHslgorTk4QtDWeh0e9Bgq9BdKF4yO0
+# # # @accesToken_user2=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImlhdCI6MTY2MzAwNDMwMiwiZXhwIjoxNjYzMDkwNzAyfQ.X0t9bEKxS6QdbWajMsQ6_6u2okGSGuEm_7d_dFqB50k
+
+# # # # usuario actual
+# # # POST {{hostname}}oneuser
+# # # Content-Type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # ####################### USUARIOS ##########################
+
+# # # @hostnameUser = http://localhost:3030/users/
+
+# # # # obtener todos los usuarios
+# # # GET {{hostnameUser}}
+# # # Content-Type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # # crear usuario
+# # # POST {{hostnameUser}}
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "username": "b",
+# # #     "password": "1234",
+# # #     "password_confirm": "1234",
+# # #     "id_rol": 1
+# # # }
+# # # ###
+
+# # # # optiene un usuario por su id
+# # # GET {{hostnameUser}}1
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # # actualizar usuario por id
+# # # PUT {{hostnameUser}}1
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "id_rol": 1
+# # # }
+# # # ###
+
+# # # # actualizar usuario logueado
+# # # PUT {{hostnameUser}}info
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "username": "a"
+# # # }
+# # # ###
+
+# # # # cambiar contraseña con el usuario autenticado
+# # # PUT {{hostnameUser}}password
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "password": "1234",
+# # #     "password_confirm": "1234"
+# # # }
+# # # ###
+
+# # # # eliminar usuario 
+# # # DELETE {{hostnameUser}}14
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # # subir imagen
+# # # POST http://localhost:3030/upload
+# # # Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# # # ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# # # Content-Disposition: form-data; name="image"
+
+# # # nomnbreimagen
+# # # ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# # # Content-Disposition: form-data; name="image"; filename="autonomia.jpg"
+# # # Content-Type: image/jpg
+
+# # # < ./autonomia.jpg
+# # # ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+# # # ###
+
+# # # GET http://localhost:3030/uploads/5795dc10aebbae9947a110491e3671f309.png
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # ################################# ROL ###################################
+# # # @hostRole = http://localhost:3030/roles/
+
+# # # # todos 
+# # # GET {{hostRole}}
+# # # Content-Type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # ###
+
+# # # # crear rol
+# # # POST {{hostRole}}   
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "nombre": "Admin",
+# # #     "permisos": [1, 2]
+# # # }
+# # # ###
+
+# # # # optiene un rol por id
+# # # GET {{hostRole}}1
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # # actualizar rol
+# # # PUT {{hostRole}}1
+# # # content-type: application/json
+# # # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "nombre": "Admin",
+# # #     "permisos": [1, 2]
+# # # }
+# # # ###
+
+# # # # eliminar rol 
+# # # DELETE {{hostRole}}1
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # ########################## PERMISOS ############################
+
+# # # @hostPermission = http://localhost:3030/permissions/
+
+# # # # todos 
+# # # GET {{hostPermission}}
+# # # Content-Type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # ###
+
+# # # # crear permiso
+# # # POST {{hostPermission}}
+# # # content-type: application/json
+# # # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "nombre": "edit_permissions"
+# # # }
+# # # ###
+
+# # # # optiene permiso por id
+# # # GET {{hostPermission}}1
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # # actualizar permiso
+# # # PUT {{hostPermission}}1
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+
+# # # {
+# # #     "nombre": "delete_users"
+# # # }
+# # # ###
+
+# # # # eliminar permiso 
+# # # DELETE {{hostPermission}}1
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###
+
+# # # # profile 
+# # # GET {{hostname}}profile
+# # # content-type: application/json
+# # # Authorization: Bearer {{accesToken_user1}}
+# # # ###

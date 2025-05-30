@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "checkJs": false,    // Habilitar verificación de errores en archivos JS
+    "module": "commonjs" // Configuración necesaria para entornos Node.js
+  },
+  "exclude": ["node_modules"]
+}
