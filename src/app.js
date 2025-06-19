@@ -1,17 +1,13 @@
-import express from 'express'
-import morgan from 'morgan'
-import cookieParser from 'cookie-parser';
-import cors from 'cors'
-const app= express()
-app.use(morgan('dev'));
-app.use(cookieParser());
-app.use(cors());
-app.get('',(req,res)=>{
-    res.json("welcomeeeeeeeeeeeee")
-})
+import React from 'react';
+import LandingPage from './components/LandingPage';
+import './index.css';
 
-//app.use('/administradores',administradores)
+function App() {
+  return (
+      <div className="App">
+        <LandingPage />
+      </div>
+  );
+}
 
-export default app;
-
-
+export default App;

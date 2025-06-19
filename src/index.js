@@ -1,24 +1,17 @@
-import express from "express"
-import app from './app.js'
-import { PORT } from './configpuerto.js'
-import cors from 'cors'
-import dotenv from 'dotenv';
-dotenv.config();
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-import authRoutes from './routes/auth.js';
-import actorRoutes from './routes/actores.js'
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-import { dbConnection } from './database.js';
-dbConnection();
-
-
-app.use(express.json())
-app.use(cors());
-
-app.use('/login', authRoutes);
-app.use('/', actorRoutes);
-
-app.listen(PORT, () => {
-    console.log(`server listening on port http://localhost:${PORT}`)
-})
-
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
