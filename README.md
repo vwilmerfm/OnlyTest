@@ -9,7 +9,7 @@
 
 ## 📋 Descripción
 
-Landing page moderna y responsiva desarrollada para **TechArdillita**, una empresa ficticia de desarrollo de software boliviana. El proyecto implementa una arquitectura modular con componentes reutilizables, diseño mobile-first y integración de la identidad visual boliviana con tendencias de diseño contemporáneas. ste proyecto fue creado como parte del Trabajo Final del diplomado "DESARROLLO DE SOFTWARE AVANZADO V1 - CBBA". 
+Landing page responsiva desarrollada para **TechArdillita**, una empresa ficticia de desarrollo de software boliviana. El proyecto implementa una arquitectura modular con componentes reutilizables, diseño mobile-first y integración de la identidad visual boliviana con tendencias de diseño contemporáneas. ste proyecto fue creado como parte del Trabajo Final del diplomado "DESARROLLO DE SOFTWARE AVANZADO V1 - CBBA". 
 
 ### ✨ Características Principales
 
@@ -77,11 +77,11 @@ src/
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/techbolivia-landing.git
-cd techbolivia-landing
+git clone https://github.com/vwilmerfm/OnlyTest.git
+cd onlytest
 
 # 2. Cambiar a la rama trabajo-final
-git checkout trabajo-final
+git checkout feature/trabajo-final
 
 # 3. Instalar dependencias
 npm install
@@ -90,24 +90,14 @@ npm install
 npm start
 ```
 
-### Configuración de Tailwind CSS
-
-El proyecto utiliza Tailwind CSS vía CDN para simplicidad. En producción, se recomienda la instalación local:
-
-```bash
-# Instalación local de Tailwind (opcional)
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
 ## 📱 Secciones Implementadas
 
 ### 🏠 Header
 - Navegación responsiva con menú hamburguesa
-- Logo con gradiente boliviano
+- Logo original
 - Scroll suave entre secciones
 
-### 🎯 Hero Section
+### 🎯 Seccion Principal
 - Fondo con gradiente animado
 - Llamadas a la acción prominentes
 - Micro-animaciones y efectos visuales
@@ -140,7 +130,7 @@ npx tailwindcss init -p
 ## 🎨 Características de Diseño
 
 ### Paleta de Colores
-- **Primario**: Gradiente rojo-amarillo-verde (bandera boliviana)
+- **Primario**: Gradiente azul-cyan-verde 
 - **Secundario**: Grises y blancos para contraste
 - **Acentos**: Rojos para llamadas a la acción
 
@@ -153,20 +143,15 @@ npx tailwindcss init -p
 ## 📚 Scripts Disponibles
 
 ```bash
-# Desarrollo
-npm start          # Ejecuta la app en modo desarrollo
+# Desarrollo - Ejecuta la app en modo desarrollo
+npm start          
 
-# Construcción
-npm run build      # Construye la app para producción
+# Construcción - Construye la app para producción
+npm run build      
 
-# Testing
-npm test           # Ejecuta las pruebas
-
-# Análisis
-npm run eject      # Expone configuración de CRA (irreversible)
 ```
 
-## 🔧 Funcionalidades Avanzadas
+## 🔧 Funcionalidades Extra
 
 ### Custom Hooks
 - **useFormValidation**: Manejo completo de formularios
@@ -183,29 +168,7 @@ npm run eject      # Expone configuración de CRA (irreversible)
 - Carga eficiente de recursos
 - Transiciones hardware-accelerated
 
-## 📸 Capturas de Pantalla
-
-![Hero Section](./screenshots/hero-section.png)
-*Sección principal con gradiente boliviano y CTAs*
-
-![Services](./screenshots/services.png)
-*Grid de servicios con iconografía moderna*
-
-![Contact Form](./screenshots/contact-form.png)
-*Formulario de contacto con validación*
-
-## 🌐 Demo en Vivo
-
-[Ver Demo](https://tu-usuario.github.io/techbolivia-landing) *(Actualizar con tu URL)*
-
-## 🤝 Contribución
-
-1. Fork el proyecto
-2. Cambia a la rama `trabajo-final`: `git checkout trabajo-final`
-3. Crea tu rama de feature: `git checkout -b feature/nueva-funcionalidad`
-4. Commit tus cambios: `git commit -m 'Agregar nueva funcionalidad'`
-5. Push a la rama: `git push origin feature/nueva-funcionalidad`
-6. Abre un Pull Request
+## 📸 Capturas de Pantalla en el documento PDF enviado
 
 ## 📄 Licencia
 
@@ -213,21 +176,20 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ## 👨‍💻 Autor
 
-**[Tu Nombre]**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-- Email: tu.email@ejemplo.com
+**Wilmer Froilan Villca Mamani**
+- GitHub: [vwilmerfm](https://github.com/vwilmerfm)
+- Email: vwilmer.fm@outlook.com
 
 ## 🙏 Agradecimientos
 
 - [React](https://reactjs.org/) por el framework
 - [Tailwind CSS](https://tailwindcss.com/) por el sistema de estilos
 - [Lucide](https://lucide.dev/) por los iconos
-- Inspiración en empresas bolivianas como BOA, Entel Bolivia, Tigo Bolivia
+- Inspiración en la Ardillita 
 
 ## 📝 Notas del Desarrollo
 
-Este proyecto fue desarrollado como trabajo final para el curso de Desarrollo Web Frontend, implementando todos los requerimientos especificados:
+Este proyecto fue desarrollado como trabajo final para el curso de Desarrollo Web Frontend (Módulo 4 del Diplomado), implementando todos los requerimientos especificados:
 
 - ✅ Header con navegación responsiva
 - ✅ Hero section con CTAs
@@ -236,11 +198,7 @@ Este proyecto fue desarrollado como trabajo final para el curso de Desarrollo We
 - ✅ Testimonios de clientes
 - ✅ Formulario de contacto funcional
 - ✅ Footer completo
-- ✅ Diseño responsivo y moderno
+- ✅ Diseño responsivo
 - ✅ Código modular y reutilizable
 
 ---
-
-**⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub!**
-
-*Desarrollado con ❤️ en Bolivia 🇧🇴*
